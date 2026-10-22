@@ -1,24 +1,9 @@
-# Native installation
+# Native Antigravity0.64.0 installation
 
-This is a complete native Google Antigravity source plugin:61 specialist workflows plus a chief-of-staff coordinator.
+The complete strict-format native package preserves61 specialists plus the coordinator,1,197 canonical files and1,972 profile files/modes. The root plugin manifest intentionally contains only the two supported fields. The unmodified generic provenance checker reports its one missing-license-field policy finding; root MIT/canonical/resource notices are verified separately and the finding is retained.
 
-```sh
-agy plugin install https://github.com/Shaisolaris/solaris-dev-shop-antigravity
-agy plugin list --json
-```
+Actual Antigravity CLI1.4.5 on a fresh hosted Linux runner is a mandatory gate in the source distribution CI. It installs/enables the package and checks62 workflows, every file/mode, helper contexts and the coordinator. No owner Google profile, model calls or retired worker are used. Inspect the exact CI before accepting a new revision.
 
-For an immutable source checkout, use the initial published source commit:
+Immutable native payload: 61eef051f66d8133b45e04b35b0fa42fdc04e757 from this repository. For an isolated host project, clone that exact revision and use Antigravity's native plugin install/enable commands. Upstream source: 2e51c951ce4573c0ab7c5cc807118d6e0c5b815c, harnesses/antigravity. The official interest form was received; marketplace approval is separate. No source test or native discovery result establishes model quality or universal client compatibility.
 
-```sh
-git clone https://github.com/Shaisolaris/solaris-dev-shop-antigravity.git
-git -C solaris-dev-shop-antigravity checkout c4419949256ef45651fc7ea8a898cf28c4bb22c0
-agy plugin install ./solaris-dev-shop-antigravity
-```
-
-This CI validates a public Git checkout through the actual native local-directory manager; the direct repository URL above is the vendor-documented route. Registry curation remains pending. The official CLI supports both GitHub repositories and local directories. Python3.10+ is required for local helpers. The host supplies tools and permissions; the plugin grants no authority and adds no MCP servers, hooks, rules, agents, credentials or background work.
-
-The native format and complete source profile are reviewed at https://github.com/Shaisolaris/solaris-dev-shop-plugins/commit/c69fbcf49e46da3837fcf75420b9914705b2eab7 . Actual Google Antigravity CLI1.4.5 installed/enabled the profile on a fresh hosted Linux runner, discovered62workflows and ran62 entrypoint contexts plus a real coordinator assignment. Source file bytes and executable modes are checked. No owner Google profile or model session was used. Registry approval and model quality are separate from these checks.
-
-The strict Google root manifest permits name/description only. The generic Solaris provenance checker retains its expected missing-license-field policy finding for that root metadata; the actual MIT LICENSE, canonical notices and byte-identical upstream resource copy remain verified. This is not represented as a clean generic scan or a security-scanner waiver.
-
-All1196 canonical source bytes are preserved through the declared source path map. Source-project CI snapshots are inert data under source-config/.github. No version, existing tag or release asset was changed. MIT licensed; Solaris Technologies, https://solaristek.com.
+Solaris Technologies, https://solaristek.com. Original branding and MIT notices retained; existing0.63 tags/assets unchanged.
