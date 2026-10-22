@@ -1,0 +1,49 @@
+name: Native Antigravity distribution
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  native-manager-and-source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          path: published
+          persist-credentials: false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: Shaisolaris/solaris-dev-shop-plugins
+          ref: 2e51c951ce4573c0ab7c5cc807118d6e0c5b815c
+          path: distribution
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Exact source profile and modes; no unexpected runtime surfaces
+        run: |
+          python - <<'PY'
+          import io,subprocess,tarfile
+          from pathlib import Path
+          root=Path('published');names=set()
+          data=subprocess.check_output(['git','-C','distribution','archive','2e51c951ce4573c0ab7c5cc807118d6e0c5b815c:harnesses/antigravity'])
+          with tarfile.open(fileobj=io.BytesIO(data)) as a:
+              for m in a:
+                  if not m.isfile():continue
+                  p=root/m.name;names.add(m.name)
+                  assert p.is_file() and not p.is_symlink() and p.read_bytes()==a.extractfile(m).read(),m.name
+                  assert bool(p.stat().st_mode&0o111)==bool(m.mode&0o111),m.name
+          actual={p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file() and '.git' not in p.relative_to(root).parts}
+          extras={'NATIVE-INSTALL.md','SOLARIS-DISTRIBUTION-SOURCE.json','.github/workflows/validate-native.yml'}
+          assert actual==names|extras,sorted(actual^(names|extras))
+          print('Exact native profile:',len(names),'files and executable modes')
+          PY
+      - name: Real native plugin manager in the fresh hosted home
+        run: |
+          mkdir -p fixture/tools/native-hosts fixture/harnesses/antigravity
+          git -C published archive HEAD | tar -x -C fixture/harnesses/antigravity
+          cp distribution/tools/verify_antigravity_host.py fixture/tools/
+          cp distribution/tools/native-hosts/antigravity-linux.json fixture/tools/native-hosts/
+          python -B fixture/tools/verify_antigravity_host.py --work "$RUNNER_TEMP/solaris-google-native"
