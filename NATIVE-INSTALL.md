@@ -1,9 +1,7 @@
-# Native Antigravity0.64.0 installation
+# Solaris Dev Shop antigravity0.65.0 candidate
 
-The complete strict-format native package preserves61 specialists plus the coordinator,1,197 canonical files and1,972 profile files/modes. The root plugin manifest intentionally contains only the two supported fields. The unmodified generic provenance checker reports its one missing-license-field policy finding; root MIT/canonical/resource notices are verified separately and the finding is retained.
+Complete61 specialist workflows plus coordinator. Source: https://github.com/Shaisolaris/solaris-dev-shop-plugins/tree/83fcb4fe0738bb4fed75716c4ec85340822a74bd/harnesses/antigravity. All 1975 profile files/modes match that source, retaining1,199 canonical hashes. Native CI verifies the actual client installation before release; prior0.64 results are historical, not relabeled as current runs.
 
-Actual Antigravity CLI1.4.5 on a fresh hosted Linux runner is a mandatory gate in the source distribution CI. It installs/enables the package and checks62 workflows, every file/mode, helper contexts and the coordinator. No owner Google profile, model calls or retired worker are used. Inspect the exact CI before accepting a new revision.
+Install the whole package through the normal host plugin manager at an exact reviewed public commit. Python3.10+ and host permissions apply. Local routing returns an assignment; it does not execute specialist work or prove output correctness. No added account grants, MCP server, model/provider changes, automatic lifecycle hooks or background schedule. The full package retains privileged optional workflows that require the operator’s appropriate tools and permissions.
 
-Immutable native payload: 61eef051f66d8133b45e04b35b0fa42fdc04e757 from this repository. For an isolated host project, clone that exact revision and use Antigravity's native plugin install/enable commands. Upstream source: 2e51c951ce4573c0ab7c5cc807118d6e0c5b815c, harnesses/antigravity. The official interest form was received; marketplace approval is separate. No source test or native discovery result establishes model quality or universal client compatibility.
-
-Solaris Technologies, https://solaristek.com. Original branding and MIT notices retained; existing0.63 tags/assets unchanged.
+Marketplace availability, registry publication and vendor approval are separate. ClawHub’s prior advisory is not cleared by source preparation. No prior release tag or asset is rewritten. Solaris Technologies, https://solaristek.com. MIT licensed.
